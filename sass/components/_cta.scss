@@ -1,0 +1,14 @@
+.cta {
+  background-image: var(--color-gradient);
+  border-radius: 2rem;
+  color: var(--color-white);
+  font-weight: var(--fw-3);
+  font-size: var(--fs-3);
+  padding: 0.75rem 2.25rem;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
