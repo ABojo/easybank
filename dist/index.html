@@ -10,5 +10,35 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Easybank</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <img class="header__logo" src="/images/logo.svg" alt="Easybank" />
+      <nav class="header__nav" aria-label="Main Navigation">
+        <button class="header__toggle" aria-expanded="false" aria-controls="header-nav-list">
+          <span class="sr-hidden">Toggle Mobile Navigation</span>
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="11">
+            <g fill="#2D314D" fill-rule="evenodd"><path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z" /></g>
+          </svg>
+        </button>
+        <ul id="header-nav-list" class="header__list">
+          <li class="header__item">
+            <a class="header__link" href="#">Home</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">About</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Contact</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Blog</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Careers</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="cta header__cta" href="#">Request Invite</a>
+    </header>
+  </body>
 </html>
