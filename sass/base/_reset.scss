@@ -9,3 +9,12 @@
 button {
   font: inherit;
 }
+
+html {
+  font-family: var(--font-family);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
