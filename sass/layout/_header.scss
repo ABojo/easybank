@@ -1,11 +1,17 @@
 @use "../abstracts/mixins" as *;
 
 .header {
-  @include layout-constrain;
+  position: relative;
+  z-index: 3;
   padding-block: 1.25rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: var(--color-white);
+
+  &__inner {
+    @include layout-constrain;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__toggle {
     display: none;
@@ -21,5 +27,25 @@
     text-decoration: none;
     font-size: var(--fs-3);
     color: var(--color-gray-blue-2);
+    transition: all 0.2s;
+
+    &::after {
+      width: 0%;
+      height: 5px;
+      content: "";
+      display: block;
+      background-image: var(--color-gradient);
+      position: relative;
+      top: 2.05rem;
+      transition: all 0.2s;
+      margin: 0 auto;
+    }
+
+    &:hover {
+      color: var(--color-dark-blue);
+      &::after {
+        width: 100%;
+      }
+    }
   }
 }
