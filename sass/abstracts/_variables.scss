@@ -6,6 +6,7 @@
   --color-gray-blue-2: hsl(233, 8%, 62%);
   --color-light-gray: hsl(0, 0%, 98%);
   --color-white: hsl(0, 0%, 100%);
+  --color-gradient: linear-gradient(135deg, var(--color-lime-green), var(--color-cyan));
 
   --fw-1: 300;
   --fw-2: 400;
@@ -25,6 +26,6 @@
 
   --font-family: "Public Sans", sans-serif;
 
-  --layout-max-width: 73.5rem;
+  --layout-max-width: 69rem;
   --layout-width: 90%;
 }
