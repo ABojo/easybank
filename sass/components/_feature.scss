@@ -1,0 +1,18 @@
+.feature {
+  &__icon {
+    margin-bottom: 2.5rem;
+  }
+
+  &__heading {
+    font-size: var(--fs-7);
+    font-weight: var(--fw-1);
+    color: var(--color-dark-blue);
+    margin-bottom: 1.5rem;
+  }
+
+  &__paragraph {
+    line-height: var(--lh-p);
+    color: var(--color-gray-blue-2);
+    font-size: var(--fs-5);
+  }
+}
