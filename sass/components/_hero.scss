@@ -1,0 +1,40 @@
+@use "../abstracts/mixins" as *;
+
+.hero {
+  padding-block: 10rem;
+  background-color: var(--color-light-gray);
+  position: relative;
+
+  &__inner {
+    @include layout-constrain;
+  }
+
+  &__heading {
+    font-size: var(--fs-9);
+    max-width: 30rem;
+    font-weight: var(--fw-1);
+    color: var(--color-dark-blue);
+    margin-bottom: 1.5rem;
+  }
+
+  &__paragraph {
+    max-width: 29rem;
+    line-height: var(--lh-p);
+    font-size: var(--fs-6);
+    color: var(--color-gray-blue-2);
+    margin-bottom: 3rem;
+  }
+
+  &__bg {
+    position: absolute;
+    right: -28.5rem;
+    top: -16.5rem;
+  }
+
+  &__phones {
+    position: absolute;
+    top: -8rem;
+    right: -8rem;
+    z-index: 2;
+  }
+}
