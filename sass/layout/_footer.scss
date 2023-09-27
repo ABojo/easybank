@@ -1,0 +1,58 @@
+@use "../abstracts/mixins" as *;
+
+.footer {
+  background-color: var(--color-dark-blue);
+  padding-block: 2.5rem;
+
+  &__grid {
+    @include layout-constrain;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-areas:
+      "logo nav cta"
+      "socials nav copyright";
+    column-gap: 9rem;
+    row-gap: 1.5rem;
+  }
+
+  &__cta {
+    grid-area: cta;
+    justify-self: end;
+    align-self: start;
+  }
+
+  &__link {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--color-lime-green);
+    }
+  }
+
+  &__nav {
+    grid-area: nav;
+
+    ul {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: max-content max-content;
+      column-gap: 7.5rem;
+      row-gap: 1rem;
+    }
+  }
+
+  &__socials {
+    list-style-type: none;
+    grid-area: socials;
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  &__copyright {
+    grid-area: copyright;
+    color: var(--color-gray-blue-2);
+    font-size: var(--fs-3);
+  }
+}
