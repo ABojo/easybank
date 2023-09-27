@@ -1,0 +1,46 @@
+.article {
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    height: 12.5rem;
+    width: 100%;
+    border-radius: 0.3125rem 0.3125rem 0 0;
+  }
+
+  &__body {
+    background-color: var(--color-white);
+    padding: 1.25rem;
+    border-radius: 0 0 0.3125rem 0.3125rem;
+    flex: 1;
+  }
+
+  &__author {
+    font-size: var(--fs-1);
+    color: var(--color-gray-blue-2);
+    margin-bottom: 0.5rem;
+  }
+
+  &__heading {
+    margin-bottom: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: var(--color-dark-blue);
+      font-weight: var(--fw-2);
+      font-size: var(--fs-5);
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--color-lime-green);
+      }
+    }
+  }
+
+  &__description {
+    font-size: 1.125rem;
+    color: var(--color-gray-blue-2);
+    font-size: var(--fs-3);
+    line-height: 1.1rem;
+  }
+}
