@@ -1,2 +1,13 @@
 @use "./base/reset";
+@use "./base/utils";
 @use "./abstracts/variables";
+
+@use "./layout/header";
+@use "./layout/footer";
+
+@use "./components/cta";
+@use "./components/hero";
+@use "./components/features";
+@use "./components/feature";
+@use "./components/articles";
+@use "./components/article";
