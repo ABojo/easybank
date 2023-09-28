@@ -1,3 +1,10 @@
+$bp-1: 81.25em;
+$bp-2: 64.375em;
+$bp-3: 58.125em;
+$bp-4: 50em;
+$bp-5: 37.5em;
+$bp-6: 27.5em;
+
 :root {
   --color-dark-blue: hsl(233, 26%, 24%);
   --color-lime-green: hsl(136, 65%, 51%);
@@ -28,4 +35,8 @@
 
   --layout-max-width: 69rem;
   --layout-width: 90%;
+
+  @media (max-width: $bp-5) {
+    --fs-9: 2.75rem;
+  }
 }

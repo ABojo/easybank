@@ -1,9 +1,18 @@
-@use "../abstracts/mixins" as *;
+@use "../abstracts" as *;
 
 .hero {
   padding-block: 10rem;
   background-color: var(--color-light-gray);
   position: relative;
+
+  @media (max-width: $bp-3) {
+    text-align: center;
+    padding-top: 35rem;
+  }
+
+  @media (max-width: $bp-6) {
+    padding-top: 30rem;
+  }
 
   &__inner {
     @include layout-constrain;
@@ -15,6 +24,10 @@
     font-weight: var(--fw-1);
     color: var(--color-dark-blue);
     margin-bottom: 1.5rem;
+
+    @media (max-width: $bp-3) {
+      margin-inline: auto;
+    }
   }
 
   &__paragraph {
@@ -23,12 +36,38 @@
     font-size: var(--fs-6);
     color: var(--color-gray-blue-2);
     margin-bottom: 3rem;
+
+    @media (max-width: $bp-3) {
+      margin-inline: auto;
+    }
   }
 
   &__bg {
     position: absolute;
     right: -28.5rem;
     top: -16.5rem;
+
+    @media (max-width: $bp-1) {
+      width: 70rem;
+      right: -32rem;
+    }
+
+    @media (max-width: $bp-2) {
+      top: -10rem;
+      right: -40rem;
+    }
+
+    @media (max-width: $bp-3) {
+      top: -35rem;
+      right: 35%;
+      transform: translateX(50%);
+      width: 90rem;
+    }
+
+    @media (max-width: $bp-5) {
+      top: -25rem;
+      width: 70rem;
+    }
   }
 
   &__phones {
@@ -36,5 +75,30 @@
     top: -8rem;
     right: -8rem;
     z-index: 2;
+
+    @media (max-width: $bp-1) {
+      top: -5rem;
+      width: 40rem;
+    }
+
+    @media (max-width: $bp-2) {
+      top: 3rem;
+      width: 35rem;
+    }
+
+    @media (max-width: $bp-3) {
+      top: -10rem;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    @media (max-width: $bp-5) {
+      top: -2rem;
+      width: 28rem;
+    }
+
+    @media (max-width: $bp-6) {
+      width: 23rem;
+    }
   }
 }

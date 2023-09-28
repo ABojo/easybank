@@ -1,4 +1,4 @@
-@use "../abstracts/mixins" as *;
+@use "../abstracts" as *;
 
 .header {
   position: relative;
@@ -15,12 +15,49 @@
 
   &__toggle {
     display: none;
+    background-color: transparent;
+    border: none;
+    height: 3rem;
+    width: 2rem;
+    background-image: url("../images/icon-hamburger.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &--open {
+      background-image: url("../images/icon-close.svg");
+    }
+
+    @media (max-width: $bp-4) {
+      display: block;
+    }
   }
 
   &__list {
     list-style-type: none;
     display: flex;
     gap: 1.6rem;
+
+    @media (max-width: $bp-4) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 10rem;
+      background-color: var(--color-white);
+      padding: 2rem;
+      flex-direction: column;
+      border-radius: 0.25rem;
+      width: 90%;
+      text-align: center;
+      max-width: 30rem;
+      display: none;
+    }
+  }
+
+  &__toggle--open ~ &__list {
+    @media (max-width: $bp-4) {
+      display: flex;
+    }
   }
 
   &__link {
@@ -28,6 +65,11 @@
     font-size: var(--fs-3);
     color: var(--color-gray-blue-2);
     transition: all 0.2s;
+
+    @media (max-width: $bp-4) {
+      font-size: var(--fs-5);
+      color: var(--color-dark-blue);
+    }
 
     &::after {
       width: 0%;
@@ -46,6 +88,12 @@
       &::after {
         width: 100%;
       }
+    }
+  }
+
+  &__cta {
+    @media (max-width: $bp-4) {
+      display: none;
     }
   }
 }

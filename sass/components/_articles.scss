@@ -1,4 +1,4 @@
-@use "../abstracts/mixins" as *;
+@use "../abstracts" as *;
 
 .articles {
   background-color: var(--color-light-gray);
@@ -13,11 +13,28 @@
     font-size: var(--fs-8);
     font-weight: var(--fw-1);
     margin-bottom: 3rem;
+
+    @media (max-width: $bp-2) {
+      text-align: center;
+    }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
+
+    @media (max-width: $bp-2) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 4rem;
+      row-gap: 2rem;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $bp-5) {
+      grid-template-columns: 1fr;
+      max-width: 18rem;
+    }
   }
 }
